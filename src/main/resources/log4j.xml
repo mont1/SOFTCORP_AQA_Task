@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTf-8"?>
+<configuration>
+    <appenders>
+        <console name="Console">
+            <patternlayout>
+                <pattern>%d{dd MMM yyyy HH:mm:ss} %-5p [%t] - %-60m [%C{-3}.%M (%f:%l)]%n</pattern>
+            </patternlayout>
+        </console>
+        <file name="File" fileName="target/logs/appTest.log">
+            <patternlayout>
+                <pattern>%d{dd MMM yyyy HH:mm:ss} %-5p [%t] – %-60m [%C{-3}.%M (%f:%l)]%n</pattern>
+            </patternlayout>
+        </file>
+    </appenders>
+    <loggers>
+        <root level="trace">
+            <appenderref ref="Console"/>
+            <appenderref ref="File"/>
+        </root>
+    </loggers>
+</configuration>
